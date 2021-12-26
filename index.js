@@ -29,6 +29,7 @@ module.exports = (TZ) => {
 
     process.on('exit', cleanup)
     process.on('SIGINT', function() {
+      cleanup();
       process.exit(2)
     })
   } else {
